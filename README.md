@@ -1,4 +1,8 @@
-# Teste de Caixa Branca (ETAPA 1)
+# Teste de Caixa Branca (ETAPA 2)
+
+> #### Descrição da Atividade
+>
+> - Nesta atividade, foi realizado um estudo da técnica de teste de caixa-branca, também conhecida como teste estrutural ou teste de caixa de vidro. Durante a análise do código, identificaram-se diversos potenciais pontos de falha e incoerências, que podem ser categorizados como possíveis erros.
 
 > #### A documentação foi descrita no código?
 > 
@@ -34,4 +38,37 @@
 >
 > - Não, o código fornecido não fecha explicitamente as conexões com o banco de dados após o uso.
 > - Para fechar conexões com o banco de dados, normalmente é utilizado o método `close()` em um bloco `finally`
+
+> #### Notação de Grafo de Fluxo
+> 
+> - Na segunda fase desta atividade, foi conduzido um estudo sobre a notação de grafo, uma ferramenta empregada para a representação do fluxo de controle lógico. Por meio dessa abordagem, torna-se viável a criação de um grafo de fluxo que corresponda ao fluxograma de controle do programa em análise.
+
+### Indentificação dos pontos de extração
+
+![Pontos de Extração](img/codigo.png)
+
+### Criação do Grafo
+
+![Notação de Grafo](img/grafo.png)
+```
+E = Número de Arestas
+N = Número de Nós do Grafo
+
+E = 15
+N = 13
+V(G) = (E - N) + 2
+V(G) = (15 - 13) + 2
+V(G) = 2 + 2
+V(G) = 4
+COMPLEXIDADE CICLOMÁTICA = 4
+```
+
+Com o calculo da Complexidade ciclomática e a Criação do Grafo, é possível identificar os seguintes caminhos independentes:
+
+1. `1-2-3-4-5-6-8-9-10-11-13`
+2. `1-2-3-4-5-7-8-9-10-11-13`
+3. `1-2-3-4-5-6-8-9-12-13`
+4. `1-2-3-4-5-7-8-9-12-13`
+
+### Última atualização - 06/10/2023
     
